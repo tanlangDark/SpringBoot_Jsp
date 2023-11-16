@@ -2,12 +2,15 @@ server:
   port: 9091
 
 spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spring?serverTimezone=GMT%2b8
     username: root
     password: root
-
 mybatis:
   mapper-locations: classpath:mapper/*.xml #扫描所有的mybatis的xml配置文件
 
@@ -15,3 +18,5 @@ mybatis:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#JSP
